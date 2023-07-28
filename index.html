@@ -17,7 +17,22 @@
   </head>
   <body>
     <main>
-        <img class="center " src="./rrrrr.jpg" alt="rrrrrrrrr" style="max-width:100%;height:auto;">
+        <img id="imageid" class="center " src="./rrrrr.jpg" alt="rrrrrrrrr" style="max-width:100%;height:auto;">
     </main>
   </body>
+<script>
+  let closed = 'Closed on Sunday'
+
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+  days.forEach((day,index)=>{
+    // Check if the index of day value is equal to the returned value of getDay()
+    if(index == new Date().getDay()){
+      if(index == 7){
+        document.title = closed;
+        document.getElementById("imageid").src="https://www.closedon-sunday.com/cdn/shop/files/COS_WEB_COMPANY_LOGO_27572695-ebd0-43c9-a6f9-0d2d08730a26.png?v=1634292545";
+        console.log(closed)}}
+    }
+)
+</script>
 </html>
